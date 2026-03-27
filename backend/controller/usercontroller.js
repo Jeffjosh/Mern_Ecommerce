@@ -29,6 +29,19 @@ export const loginuser=async(req,res)=>{
     try{
         const {email,password}=req.body
 
+        if(email===process.env.Admin_email && password===process.env.Admin_password){
+            const token=jwt.sign(
+                {isAdmin:true},
+                process.env.jwt_secret,
+                {expiresIn:"1d"}
+            )
+            return res.json({
+                email,
+                isAdmin:true,
+                token
+            })
+        }
+
         const user=await User.findOne({email})
 
         if(!user){
@@ -56,3 +69,4 @@ export const loginuser=async(req,res)=>{
         res.status(500).json({error:err.message})
     }
 }
+
