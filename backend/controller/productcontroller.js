@@ -23,3 +23,22 @@ export const addproduct= async(req,res)=>{
     }
 
 }
+
+export const getproduct=async(req,res)=>{
+    try{
+        const products=await Product.find()
+        res.json(products)
+    }catch(err){
+        res.status(500).json({error:err.message})
+
+    }
+}
+
+export const getproductbyid=async(req,res)=>{
+    try{
+        const product=await Product.findById(req.params.id)
+        res.json(product)
+    }catch(error){
+        res.status(500).json({error:err.message})
+    }
+}
