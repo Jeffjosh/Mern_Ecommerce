@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "name": "mern_ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "server":"npm start --prefix backend",
+    "client":"npm run dev --prefix frontend/ecom",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeffjosh/Mern_Ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jeffjosh/Mern_Ecommerce/issues"
+  },
+  "homepage": "https://github.com/Jeffjosh/Mern_Ecommerce#readme"
+}
