@@ -8,7 +8,7 @@ function Register() {
     name:'',
     email:'',
     password:''
-  })
+  }) 
   const handlechange=(e)=>{
     setform({...form,[e.target.name]:e.target.value})
   }

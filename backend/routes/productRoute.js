@@ -4,7 +4,9 @@ import { addproduct,getproduct,getproductbyid } from "../controller/productcontr
 
 const router=express.Router()
 
-
+router.get("/test", (req, res) => {
+  res.send("Product route working ✅");
+});
 router.post("/addproduct",protect,adminOnly,addproduct)
 router.get("/",getproduct)
 router.get("/:id",getproductbyid)

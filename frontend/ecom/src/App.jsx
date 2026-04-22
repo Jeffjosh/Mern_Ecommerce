@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Protectroute from './Components/Protectroute.jsx'
 import Cart from './pages/Cart.jsx'
+import Addproduct from './pages/Addproduct.jsx'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/cart' element={<Protectroute><Cart/></Protectroute>}/>
+        <Route path='/addproduct' element={<Addproduct/>}/>
       </Routes>
     </BrowserRouter>
   )
